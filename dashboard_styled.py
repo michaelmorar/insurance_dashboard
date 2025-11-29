@@ -24,7 +24,7 @@ else:
     excel_path = "~/Downloads/aviva.xlsx"
 
 # -----------------------------
-# 2) Read sheets
+# 2) Read sheets, load to data frames and drop rows with missing values
 # -----------------------------
 df_oct = pd.read_excel(excel_path, sheet_name="DATA-Oct25")
 df_sep = pd.read_excel(excel_path, sheet_name="Data_SEPT25")
