@@ -14,27 +14,27 @@ def main():
 
     # 2) Read sheets
     print("Loading data...")
-    df_nov, df_oct, df_sep = data_loader.load_data(excel_path)
+    df_1, df_2, df_3 = data_loader.load_data(excel_path)
 
     # 3) Clean data
     print("Cleaning data...")
-    df_nov, df_oct, df_sep = data_cleaner.clean_dataframes(df_nov, df_oct, df_sep)
+    df_1, df_2, df_3 = data_cleaner.clean_dataframes(df_1, df_2, df_3)
     
-    print(f"Nov records: {len(df_nov)}")
-    print(f"Oct records: {len(df_oct)}")
-    print(f"Sep records: {len(df_sep)}")
+    print(f"{config.MONTH_1} records: {len(df_1)}")
+    print(f"{config.MONTH_2} records: {len(df_2)}")
+    print(f"{config.MONTH_3} records: {len(df_3)}")
 
     # 4) Plotting
     print("Generating plots...")
     plotter.setup_style()
-    plotter.plot_total_on_account(df_nov, df_oct, df_sep)
-    plotter.plot_grouped_comparisons(df_nov, df_oct, df_sep)
+    plotter.plot_total_on_account(df_1, df_2, df_3)
+    plotter.plot_grouped_comparisons(df_1, df_2, df_3)
 
     # 5) Sanity check (Optional)
     target = "Project Rome"
-    print("NOV Project Rome =", (df_nov["Project / Programme"] == target).sum())
-    print("OCT Project Rome =", (df_oct["Project / Programme"] == target).sum())
-    print("SEP Project Rome =", (df_sep["Project / Programme"] == target).sum())
+    print(f"{config.MONTH_1} Project Rome =", (df_1["Project / Programme"] == target).sum())
+    print(f"{config.MONTH_2} Project Rome =", (df_2["Project / Programme"] == target).sum())
+    print(f"{config.MONTH_3} Project Rome =", (df_3["Project / Programme"] == target).sum())
 
     print("Done! Check the 'outputs' folder.")
 

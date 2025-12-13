@@ -13,8 +13,8 @@ def get_excel_path(base_dir="."):
 
 def load_data(excel_path):
     """Loads the specific sheets from the Excel file."""
-    df_nov = pd.read_excel(excel_path, sheet_name=config.SHEET_NOV)
-    df_oct = pd.read_excel(excel_path, sheet_name=config.SHEET_OCT)
-    df_sep = pd.read_excel(excel_path, sheet_name=config.SHEET_SEP)
+    df_1 = pd.read_excel(excel_path, sheet_name=config.SHEET_1)
+    df_2 = pd.read_excel(excel_path, sheet_name=config.SHEET_2)
+    df_3 = pd.read_excel(excel_path, sheet_name=config.SHEET_3)
     
-    return df_nov, df_oct, df_sep
+    return df_1, df_2, df_3

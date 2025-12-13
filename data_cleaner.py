@@ -8,23 +8,23 @@ def clean_col(series: pd.Series) -> pd.Series:
     s = s.str.strip().str.replace(r"\s+", " ", regex=True)
     return s
 
-def clean_dataframes(df_nov, df_oct, df_sep):
+def clean_dataframes(df_1, df_2, df_3):
     """Applies cleaning logic to the dataframes."""
     
     # Drop rows with missing 'Resource Full Name'
-    df_nov = df_nov.dropna(subset=['Resource Full Name']).copy()
-    df_oct = df_oct.dropna(subset=['Resource Full Name']).copy()
-    df_sep = df_sep.dropna(subset=['Resource Full Name']).copy()
+    df_1 = df_1.dropna(subset=['Resource Full Name']).copy()
+    df_2 = df_2.dropna(subset=['Resource Full Name']).copy()
+    df_3 = df_3.dropna(subset=['Resource Full Name']).copy()
 
     # Clean column names
-    df_nov.columns = df_nov.columns.str.strip()
-    df_oct.columns = df_oct.columns.str.strip()
-    df_sep.columns = df_sep.columns.str.strip()
+    df_1.columns = df_1.columns.str.strip()
+    df_2.columns = df_2.columns.str.strip()
+    df_3.columns = df_3.columns.str.strip()
 
     # Normalize values for category columns
-    for df in (df_nov, df_oct, df_sep):
+    for df in (df_1, df_2, df_3):
         for col in config.CATEGORIES.values():
             if col in df.columns:
                 df[col] = clean_col(df[col])
                 
-    return df_nov, df_oct, df_sep
+    return df_1, df_2, df_3
