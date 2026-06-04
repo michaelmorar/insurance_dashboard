@@ -1,0 +1,9 @@
+﻿source_row,name,actual_start,project,business_unit,project_type,role,city,country,action
+1160,Bhavya Shingari,2026-05-05,PL,General Insurance,,Business Analyst,London,UK,skipped: name already present in DATA_May26
+1236,Kimberlee McLaughlan,2026-05-05,UKGI Nova,General Insurance,,Project Manager,Edinburgh,UK,added
+1249,Voke Okelezo,2026-05-01,Technical Business Analysis - River,General Insurance,Data migration,Data Analyst,London,UK,skipped: name already present in DATA_May26
+1257,Kenny McGavin,2026-05-05,BA - MADI (Marketing Analytics Data Integration - River Phase 3),General Insurance,Data migration,Business Analyst,Edinburgh,UK,added
+1267,Ayesha Siddiqa,2026-05-04,Senior BA (GenAI),,,Business Analyst,Bangalore,India,added
+1272,Aatish Patel,2026-05-18,1/5 BA for River Process Harmonisation,General Insurance,Data migration,Business Analyst,London,UK,skipped: name already present in DATA_May26
+1278,Charlotte Lee,2026-05-18,2/3 PM for River Process Harmonisation,General Insurance,Data migration,Programme Manager,London,UK,added
+1284,Shriya Kotecha,2026-05-11,BA - Adobe Workfront - Work Management Software,General Insurance,,Business Analyst,London,UK,added
