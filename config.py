@@ -9,13 +9,13 @@ FONT_SIZE = 12
 OUTPUT_DIR = "outputs"
 
 # Sheet names
-SHEET_1 = "DATA_May26"
-SHEET_2 = "DATA_Apr26"
-SHEET_3 = "DATA_Mar26"
+SHEET_1 = "DATA_Jun26"
+SHEET_2 = "DATA_May26"
+SHEET_3 = "DATA_Apr26"
 
-MONTH_1 = "May"
-MONTH_2 = "April"
-MONTH_3 = "March"
+MONTH_1 = "June"
+MONTH_2 = "May"
+MONTH_3 = "April"
 
 # Column mapping
 CATEGORIES = {

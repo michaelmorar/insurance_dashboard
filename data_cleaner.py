@@ -21,6 +21,11 @@ def clean_dataframes(df_1, df_2, df_3):
     df_2.columns = df_2.columns.str.strip()
     df_3.columns = df_3.columns.str.strip()
 
+    # Drop rows where Active is No
+    df_1 = df_1[df_1['Active'].str.strip().str.lower() != 'no'].copy()
+    df_2 = df_2[df_2['Active'].str.strip().str.lower() != 'no'].copy()
+    df_3 = df_3[df_3['Active'].str.strip().str.lower() != 'no'].copy()
+
     # Normalize values for category columns
     for df in (df_1, df_2, df_3):
         for col in config.CATEGORIES.values():
