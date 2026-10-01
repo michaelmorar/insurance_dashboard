@@ -9,7 +9,7 @@ def get_excel_path(base_dir="."):
         return os.path.join(base_dir, files[0])
     else:
         # If multiple Excel files exist, specify the filename directly
-        return "~/Downloads/aviva.xlsx"
+        return "./outputs/dashboard_updated.xlsx"
 
 def load_data(excel_path):
     """Loads the specific sheets from the Excel file."""
